@@ -87,9 +87,9 @@ public class CommissionEmployee {
     {
         return String.format( "%s: %s %s\n%s: %s\n%s: %.2f\n%s: %.2f",
                 "commission employee", getFirstName(), getLastName(),
-                "social security number", socialSecurityNumber,
-                "gross sales", grossSales,
-                "commission rate", commissionRate );
+                "social security number", getSocialSecurityNumber(),
+                "gross sales", getGrossSales(),
+                "commission rate", getCommissionRate() );
     } // end method toString
 }
 
