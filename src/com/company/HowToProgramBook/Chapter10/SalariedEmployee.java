@@ -1,4 +1,5 @@
 package com.company.HowToProgramBook.Chapter10;
+// SalariedEmployee class extends Employee, which implements Payable.
 
 public class SalariedEmployee extends Employee{
 
@@ -14,7 +15,7 @@ public class SalariedEmployee extends Employee{
     public void setWeeklySalary( double salary )
     {
             if ( salary >= 0.0 )
-                baseSalary = salary;
+                weeklySalary = salary;
             else
             throw new IllegalArgumentException(
                     "Weekly salary must be >= 0.0" );
@@ -26,11 +27,13 @@ public class SalariedEmployee extends Employee{
             return weeklySalary;
             } // end method getWeeklySalary
 
-    // calculate earnings; override abstract method earnings in Employee
-    @Override
-    public double earnings() {
+
+    // calculate earnings; implement interface Payable method that was
+// abstract in superclass Employee
+    public double getPaymentAmount()
+    {
         return getWeeklySalary();
-    }
+    } // end method getPaymentAmount
 
     // return String representation of SalariedEmployee object
     @Override

@@ -1,6 +1,6 @@
 package com.company.HowToProgramBook.Chapter10;
-// Employee abstract superclass.
-public abstract class Employee {
+// Employee abstract superclass -\that implements Payable.
+public abstract class Employee implements Payable {
     private String firstName;
     private String lastName;
     private String socialSecurityNumber;
@@ -48,8 +48,9 @@ public abstract class Employee {
         return String.format("%s %s\nsocial security number: %s",
                 getFirstName(), getLastName(), getSocialSecurityNumber());
     } // end method toString
+    
 
-    // abstract method overridden by concrete subclasses
-    public abstract double earnings(); // no implementation here
+    // Note: We do not implement Payable method getPaymentAmount here so
+// this class must be declared abstract to avoid a compilation error.
 }
 
