@@ -19,7 +19,7 @@ public class AlmostPalindrome {
                 //creates a new string by concatenating the substring of position 0 and index
                 // (excluding value of position index) with character at position i
                 str = str.substring(0, index) + str.charAt(i) + str.substring(index + 1);
-                int a = 5 +6+7;  //abcdcb + a + ""
+
             }
 
             //tests if the character at position i is equal to the character at position n- i
